@@ -1,5 +1,6 @@
-package ccAttack;
-
+/*
+Author:Walaa
+*/
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.math.BigInteger;
@@ -90,13 +91,13 @@ public class Battacker {
 		else
 			System.out.println("nop");
 
-		
+
 		long lEndTime = System.currentTimeMillis();
 
 		System.out.println("d= " + d);
 		long output = lEndTime - lStartTime;
 		System.out.println("time= " + output);
-		
+
 		String m=decryptMsg(msg,d,n);
 		System.out.println("The original message is: "+ toAscii(m));
 
