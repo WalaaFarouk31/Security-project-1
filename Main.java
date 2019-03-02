@@ -1,5 +1,6 @@
-package ccAttack;
-
+/*
+Author:Ghada
+*/
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
@@ -8,14 +9,14 @@ import java.time.LocalTime;
 import java.util.Random;
 import java.util.Scanner;
 
-import static java.time.temporal.ChronoUnit.NANOS;
+import static java.time.temporal.ChronoUnit.*;
 
 public class Main {
 
     public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
         File file = new File("msg.txt");
-        Scanner myObj = new Scanner(file);  // Create a Scanner object
-        String msg = myObj.nextLine();  // Read user input
+        Scanner myObj = new Scanner(file);
+        String msg = myObj.nextLine();
         System.out.println(msg);
         for (int i=3;i<=12;++i) {
             Random rnd = new Random();
@@ -26,8 +27,8 @@ public class Main {
             LocalTime t1 = java.time.LocalTime.now();
             String result = sender.encryptMsg(msg,rsa.n,rsa.e);
             LocalTime t2 = java.time.LocalTime.now();
-            System.out.println(NANOS.between(t1,t2));
-           // System.out.println(rsa.decryptMsg(result));
+            System.out.println(MILLIS.between(t1,t2));
+            //System.out.println(rsa.decryptMsg(result));
         }
     }
 }
