@@ -1,5 +1,6 @@
-package ccAttack;
-
+/*
+Author:Ghada
+*/
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -47,6 +48,7 @@ public class Sender {
         System.out.println("encMsg "+encMsg);
         PrintWriter pw = new PrintWriter("recived.txt");
         pw.print(encMsg);
+        pw.close();
     }
 }
 
